@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEFIN - Healthcare & Financial Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <h2>HEFIN</h2>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span class="menu-icon" id="menuIcon">☰</span>
+                <span class="close-icon hidden" id="closeIcon">✕</span>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-links desktop-nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                
+                <div class="nav-actions" id="navActions">
+                    <button class="btn btn-outline" id="appointmentBtn">Book Appointment</button>
+                    <button class="btn btn-primary" id="signInBtn">Sign In</button>
+                </div>
+                
+                <!-- Authenticated User Menu (Hidden by default) -->
+                <div class="user-menu hidden" id="userMenu">
+                    <button class="btn btn-outline" id="userAppointmentBtn">Book Appointment</button>
+                    <div class="user-info">
+                        <span class="user-icon">👤</span>
+                        <span class="user-name" id="userName">User</span>
+                    </div>
+                    <button class="btn btn-ghost" id="signOutBtn">Sign Out</button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav hidden" id="mobileNav">
+                <div class="mobile-nav-links">
+                    <a href="#home" class="mobile-nav-link">Home</a>
+                    <a href="#services" class="mobile-nav-link">Services</a>
+                    <a href="#about" class="mobile-nav-link">About</a>
+                    <a href="#contact" class="mobile-nav-link">Contact</a>
+                    
+                    <div class="mobile-nav-actions" id="mobileNavActions">
+                        <button class="btn btn-outline mobile-btn" id="mobileAppointmentBtn">Book Appointment</button>
+                        <button class="btn btn-primary mobile-btn" id="mobileSignInBtn">Sign In</button>
+                    </div>
+                    
+                    <!-- Mobile Authenticated User Menu -->
+                    <div class="mobile-user-menu hidden" id="mobileUserMenu">
+                        <div class="mobile-user-info">
+                            <span class="user-icon">👤</span>
+                            <span>Welcome, <span id="mobileUserName">User</span></span>
+                        </div>
+                        <button class="btn btn-outline mobile-btn" id="mobileUserAppointmentBtn">Book Appointment</button>
+                        <button class="btn btn-ghost mobile-btn" id="mobileSignOutBtn">Sign Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with Image Slider -->
+        <section id="home" class="hero-section">
+            <div class="hero-slider" id="heroSlider">
+                <!-- Slide 1 -->
+                <div class="hero-slide active">
+                    <div class="hero-container">
+                        <div class="hero-content">
+                            <h1 class="hero-title">
+                                Your Health & Wealth,
+                                <span class="hero-subtitle">Our Priority</span>
+                            </h1>
+                            <p class="hero-description">
+                                HEFIN combines cutting-edge healthcare solutions with comprehensive financial services 
+                                to secure your future and well-being.
+                            </p>
+                            
+                            <div class="hero-features">
+                                <div class="hero-feature">
+                                    <div class="feature-icon-container">
+                                        <span class="feature-icon">🛡️</span>
+                                    </div>
+                                    <div>
+                                        <h3>Secure & Trusted</h3>
+                                        <p>Bank-level security</p>
+                                    </div>
+                                </div>
+                                <div class="hero-feature">
+                                    <div class="feature-icon-container">
+                                        <span class="feature-icon">📈</span>
+                                    </div>
+                                    <div>
+                                        <h3>Growth Focused</h3>
+                                        <p>Proven results</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="hero-actions">
+                                <button class="btn btn-secondary btn-lg" id="heroServicesBtn">
+                                    Explore Services
+                                    <span class="btn-arrow">→</span>
+                                </button>
+                                <button class="btn btn-outline-white btn-lg" id="heroConsultationBtn">
+                                    Schedule Consultation
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1691934286085-70d08eecebd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwcHJvZmVzc2lvbmFscyUyMG1vZGVybiUyMG9mZmljZXxlbnwxfHx8fDE3NTU2OTg5MjR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
+                                 alt="Healthcare professionals in modern office" 
+                                 class="hero-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="hero-slide">
+                    <div class="hero-container">
+                        <div class="hero-content">
+                            <h1 class="hero-title">
+                                Strategic Financial
+                                <span class="hero-subtitle">Planning</span>
+                            </h1>
+                            <p class="hero-description">
+                                Expert financial advisors working with healthcare professionals to create personalized 
+                                wealth management strategies that protect and grow your assets.
+                            </p>
+                            
+                            <div class="hero-features">
+                                <div class="hero-feature">
+                                    <div class="feature-icon-container">
+                                        <span class="feature-icon">💰</span>
+                                    </div>
+                                    <div>
+                                        <h3>Wealth Building</h3>
+                                        <p>Smart investments</p>
+                                    </div>
+                                </div>
+                                <div class="hero-feature">
+                                    <div class="feature-icon-container">
+                                        <span class="feature-icon">🏦</span>
+                                    </div>
+                                    <div>
+                                        <h3>Future Security</h3>
+                                        <p>Retirement ready</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="hero-actions">
+                                <button class="btn btn-secondary btn-lg" id="heroFinancialBtn">
+                                    Financial Services
+                                    <span class="btn-arrow">→</span>
+                                </button>
+                                <button class="btn btn-outline-white btn-lg" id="heroFinancialConsultationBtn">
+                                    Schedule Consultation
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1672917187338-7f81ecac3d3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBwbGFubmluZyUyMHRlYW0lMjBtZWV0aW5nfGVufDF8fHx8MTc1NTY5ODkyN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
+                                 alt="Financial planning team meeting" 
+                                 class="hero-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="hero-slide">
+                    <div class="hero-container">
+                        <div class="hero-content">
+                            <h1 class="hero-title">
+                                Advanced Healthcare
+                                <span class="hero-subtitle">Innovation</span>
+                            </h1>
+                            <p class="hero-description">
+                                Cutting-edge medical technology and personalized care plans designed to optimize your 
+                                health outcomes while managing healthcare costs effectively.
+                            </p>
+                            
+                            <div class="hero-features">
+                                <div class="hero-feature">
+                                    <div class="feature-icon-container">
+                                        <span class="feature-icon">❤️</span>
+                                    </div>
+                                    <div>
+                                        <h3>Preventive Care</h3>
+                                        <p>Health-first approach</p>
+                                    </div>
+                                </div>
+                                <div class="hero-feature">
+                                    <div class="feature-icon-container">
+                                        <span class="feature-icon">🩺</span>
+                                    </div>
+                                    <div>
+                                        <h3>Expert Teams</h3>
+                                        <p>Specialist network</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="hero-actions">
+                                <button class="btn btn-secondary btn-lg" id="heroHealthcareBtn">
+                                    Healthcare Services
+                                    <span class="btn-arrow">→</span>
+                                </button>
+                                <button class="btn btn-outline-white btn-lg" id="heroHealthcareConsultationBtn">
+                                    Schedule Consultation
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1656428964836-78d54bf76231?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtZWRpY2FsJTIwdGVjaG5vbG9neSUyMGlubm92YXRpb258ZW58MXx8fHwxNzU1NjY0MjEzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
+                                 alt="Medical technology innovation" 
+                                 class="hero-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="slider-arrow slider-prev" id="sliderPrev" aria-label="Previous slide">
+                    <span>‹</span>
+                </button>
+                <button class="slider-arrow slider-next" id="sliderNext" aria-label="Next slide">
+                    <span>›</span>
+                </button>
+
+                <!-- Slide Indicators -->
+                <div class="slider-indicators">
+                    <div class="indicators-container">
+                        <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+                        <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
+                        <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
+                    </div>
+                    <div class="slide-counter">
+                        <span id="currentSlide">1</span> of <span id="totalSlides">3</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-description">
+                        Comprehensive healthcare and financial solutions designed to protect and grow what matters most to you
+                    </p>
+                </div>
+
+                <!-- Healthcare Services -->
+                <div class="service-category">
+                    <div class="category-header">
+                        <div class="category-icon healthcare-icon">❤️</div>
+                        <h3 class="category-title">Healthcare Services</h3>
+                        <p class="category-description">
+                            Complete healthcare solutions focused on prevention, treatment, and long-term wellness
+                        </p>
+                    </div>
+
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">🩺</div>
+                            <h4 class="service-title">Primary Care</h4>
+                            <p class="service-description">Comprehensive primary healthcare with preventive focus</p>
+                            <ul class="service-features">
+                                <li>Annual health screenings</li>
+                                <li>Chronic disease management</li>
+                                <li>Preventive care programs</li>
+                                <li>24/7 telehealth access</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">📊</div>
+                            <h4 class="service-title">Health Analytics</h4>
+                            <p class="service-description">Data-driven insights for optimal health outcomes</p>
+                            <ul class="service-features">
+                                <li>Personalized health reports</li>
+                                <li>Risk assessment tools</li>
+                                <li>Treatment optimization</li>
+                                <li>Predictive health modeling</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">👥</div>
+                            <h4 class="service-title">Family Care</h4>
+                            <p class="service-description">Coordinated healthcare for the whole family</p>
+                            <ul class="service-features">
+                                <li>Pediatric to geriatric care</li>
+                                <li>Family health planning</li>
+                                <li>Coordinated specialist referrals</li>
+                                <li>Health education programs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial Services -->
+                <div class="service-category">
+                    <div class="category-header">
+                        <div class="category-icon financial-icon">📈</div>
+                        <h3 class="category-title">Financial Services</h3>
+                        <p class="category-description">
+                            Strategic financial planning and wealth management tailored to your healthcare needs
+                        </p>
+                    </div>
+
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">🏦</div>
+                            <h4 class="service-title">Health Savings Planning</h4>
+                            <p class="service-description">Optimize your healthcare spending and savings</p>
+                            <ul class="service-features">
+                                <li>HSA/FSA optimization</li>
+                                <li>Medical expense planning</li>
+                                <li>Healthcare budgeting</li>
+                                <li>Tax-advantaged strategies</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">📈</div>
+                            <h4 class="service-title">Investment Management</h4>
+                            <p class="service-description">Grow your wealth while protecting your health future</p>
+                            <ul class="service-features">
+                                <li>Diversified portfolio management</li>
+                                <li>Risk-adjusted returns</li>
+                                <li>Healthcare sector investments</li>
+                                <li>Retirement planning integration</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🛡️</div>
+                            <h4 class="service-title">Insurance Solutions</h4>
+                            <p class="service-description">Comprehensive protection for health and wealth</p>
+                            <ul class="service-features">
+                                <li>Health insurance optimization</li>
+                                <li>Life and disability coverage</li>
+                                <li>Long-term care planning</li>
+                                <li>Insurance portfolio review</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="services-cta">
+                    <h3>Ready to integrate your healthcare and financial planning?</h3>
+                    <div class="services-cta-actions">
+                        <button class="btn btn-secondary btn-lg" id="servicesConsultationBtn">
+                            <span class="btn-icon">🕒</span>
+                            Book Consultation
+                        </button>
+                        <button class="btn btn-outline btn-lg" id="financialCalculatorBtn">
+                            <span class="btn-icon">🧮</span>
+                            Financial Calculator
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2 class="about-title">Why Choose HEFIN</h2>
+                        <p class="about-description">
+                            We understand that health and wealth are interconnected. Our integrated approach ensures that your 
+                            financial decisions support your health goals, and your health investments protect your financial future.
+                        </p>
+
+                        <div class="about-features">
+                            <div class="about-feature">
+                                <div class="feature-icon">🎯</div>
+                                <div>
+                                    <h4>Integrated Approach</h4>
+                                    <p>Seamlessly connecting your health and financial wellbeing for optimal outcomes.</p>
+                                </div>
+                            </div>
+
+                            <div class="about-feature">
+                                <div class="feature-icon">👨‍⚕️</div>
+                                <div>
+                                    <h4>Expert Team</h4>
+                                    <p>Certified healthcare professionals and financial advisors working together.</p>
+                                </div>
+                            </div>
+
+                            <div class="about-feature">
+                                <div class="feature-icon">🔐</div>
+                                <div>
+                                    <h4>Secure & Compliant</h4>
+                                    <p>HIPAA-compliant healthcare services with SEC-regulated financial planning.</p>
+                                </div>
+                            </div>
+
+                            <div class="about-feature">
+                                <div class="feature-icon">📱</div>
+                                <div>
+                                    <h4>Technology-Driven</h4>
+                                    <p>Advanced analytics and AI-powered insights for personalized recommendations.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-stats">
+                            <div class="stat">
+                                <div class="stat-number">10,000+</div>
+                                <div class="stat-label">Clients Served</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">$2B+</div>
+                                <div class="stat-label">Assets Under Management</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Team of professionals working together" 
+                             class="about-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="contact-title">Get In Touch</h2>
+                        <p class="contact-description">
+                            Ready to take control of your health and financial future? Our team is here to help you get started.
+                        </p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <h4>Visit Us</h4>
+                                    <p>123 Healthcare Plaza<br>Financial District<br>New York, NY 10001</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">📞</div>
+                                <div>
+                                    <h4>Call Us</h4>
+                                    <p>Main: +1 (555) 123-4567<br>Emergency: +1 (555) 987-6543</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <h4>Email Us</h4>
+                                    <p>info@hefin.com<br>support@hefin.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">🕒</div>
+                                <div>
+                                    <h4>Office Hours</h4>
+                                    <p>Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM<br>Sun: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <div class="contact-form-card">
+                            <div class="form-header">
+                                <h3>Send us a message</h3>
+                                <p>We'll respond within 24 hours</p>
+                            </div>
+
+                            <form id="contactForm" class="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="service">Service Interest</label>
+                                    <select id="service" name="service">
+                                        <option value="">Select a service</option>
+                                        <option value="healthcare">Healthcare Services</option>
+                                        <option value="financial">Financial Services</option>
+                                        <option value="both">Both Healthcare & Financial</option>
+                                        <option value="consultation">General Consultation</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="message" rows="4" 
+                                              placeholder="Tell us about your needs and how we can help..." required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-lg form-submit-btn">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-loading hidden">Sending Message...</span>
+                                </button>
+
+                                <p class="form-disclaimer">
+                                    * Required fields. By submitting this form, you agree to our privacy policy and terms of service.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">HEFIN</h3>
+                    <p class="footer-description">
+                        Bridging healthcare and financial services for a secure, healthy future.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Facebook</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Primary Care</a></li>
+                        <li><a href="#services">Health Analytics</a></li>
+                        <li><a href="#services">Investment Management</a></li>
+                        <li><a href="#services">Insurance Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">HIPAA Compliance</a></li>
+                        <li><a href="#">SEC Disclosures</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 HEFIN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Access Your HEFIN Account</h3>
+                <p>Sign in to manage your healthcare and financial services</p>
+                <button class="modal-close" id="authModalClose">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="login">
+                            <span>🔐</span> Sign In
+                        </button>
+                        <button class="tab-btn" data-tab="register">
+                            <span>👤</span> Sign Up
+                        </button>
+                    </div>
+
+                    <!-- Login Tab -->
+                    <div id="loginTab" class="tab-content active">
+                        <div class="form-card">
+                            <div class="form-header">
+                                <h4>Welcome Back</h4>
+                                <p>Enter your credentials to access your account</p>
+                            </div>
+                            <form id="loginForm">
+                                <div class="form-group">
+                                    <label for="loginEmail">Email</label>
+                                    <input type="email" id="loginEmail" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="loginPassword">Password</label>
+                                    <input type="password" id="loginPassword" name="password" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-full">
+                                    <span class="btn-text">Sign In</span>
+                                    <span class="btn-loading hidden">Signing in...</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Register Tab -->
+                    <div id="registerTab" class="tab-content">
+                        <div class="form-card">
+                            <div class="form-header">
+                                <h4>Create Your Account</h4>
+                                <p>Join HEFIN for integrated healthcare and financial services</p>
+                            </div>
+                            <form id="registerForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="regFirstName">First Name</label>
+                                        <input type="text" id="regFirstName" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="regLastName">Last Name</label>
+                                        <input type="text" id="regLastName" name="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="regEmail">Email</label>
+                                    <input type="email" id="regEmail" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="regPassword">Password</label>
+                                    <input type="password" id="regPassword" name="password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="serviceType">Primary Service Interest</label>
+                                    <select id="serviceType" name="serviceType" required>
+                                        <option value="">Select your primary interest</option>
+                                        <option value="healthcare">❤️ Healthcare Services</option>
+                                        <option value="financial">📈 Financial Services</option>
+                                        <option value="both">❤️📈 Both Healthcare & Financial</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-full">
+                                    <span class="btn-text">Create Account</span>
+                                    <span class="btn-loading hidden">Creating Account...</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Modal -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3>Book Your Appointment</h3>
+                <p>Schedule a consultation with our healthcare and financial experts</p>
+                <button class="modal-close" id="appointmentModalClose">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <!-- Success View -->
+                <div id="appointmentSuccess" class="success-view hidden">
+                    <div class="success-content">
+                        <div class="success-icon">✅</div>
+                        <h3>Appointment Confirmed</h3>
+                        <p>Your appointment has been successfully booked</p>
+                        <div class="confirmation-details" id="confirmationDetails">
+                            <!-- Details will be populated by JavaScript -->
+                        </div>
+                        <button class="btn btn-primary" id="closeSuccessBtn">Close</button>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div id="appointmentForm" class="booking-form">
+                    <form id="bookingForm">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h4>👤 Personal Information</h4>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="apptFirstName">First Name *</label>
+                                    <input type="text" id="apptFirstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apptLastName">Last Name *</label>
+                                    <input type="text" id="apptLastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="apptEmail">Email *</label>
+                                    <input type="email" id="apptEmail" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apptPhone">Phone *</label>
+                                    <input type="tel" id="apptPhone" name="phone" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appointment Details -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h4>📅 Appointment Details</h4>
+                            </div>
+                            <div class="form-group">
+                                <label for="apptServiceType">Service Type *</label>
+                                <select id="apptServiceType" name="serviceType" required>
+                                    <option value="">Select the service you need</option>
+                                    <option value="healthcare">❤️ Healthcare Consultation</option>
+                                    <option value="financial">📈 Financial Planning</option>
+                                    <option value="both">❤️📈 Integrated Consultation</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="apptDate">Preferred Date *</label>
+                                    <input type="date" id="apptDate" name="appointmentDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apptTime">Preferred Time *</label>
+                                    <select id="apptTime" name="appointmentTime" required>
+                                        <option value="">Select time</option>
+                                        <option value="09:00">9:00 AM</option>
+                                        <option value="09:30">9:30 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="10:30">10:30 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="11:30">11:30 AM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="14:30">2:30 PM</option>
+                                        <option value="15:00">3:00 PM</option>
+                                        <option value="15:30">3:30 PM</option>
+                                        <option value="16:00">4:00 PM</option>
+                                        <option value="16:30">4:30 PM</option>
+                                        <option value="17:00">5:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="preferredProvider">Preferred Provider (Optional)</label>
+                                <input type="text" id="preferredProvider" name="preferredProvider" 
+                                       placeholder="Dr. Smith, John Financial Advisor, etc.">
+                            </div>
+                            <div class="form-group">
+                                <label for="reason">Reason for Visit (Optional)</label>
+                                <textarea id="reason" name="reason" rows="3" 
+                                          placeholder="Briefly describe what you'd like to discuss..."></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            <span class="btn-text">Book Appointment</span>
+                            <span class="btn-loading hidden">Booking Appointment...</span>
+                        </button>
+
+                        <p class="form-disclaimer">
+                            * Required fields. We'll contact you within 24 hours to confirm your appointment details.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Financial Calculator Modal -->
+    <div id="calculatorModal" class="modal">
+        <div class="modal-content modal-extra-large">
+            <div class="modal-header">
+                <h3>HEFIN Financial Calculator Suite</h3>
+                <p>Plan your financial future with our comprehensive calculator tools</p>
+                <button class="modal-close" id="calculatorModalClose">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="calculator-tabs">
+                    <div class="calculator-tab-buttons">
+                        <button class="calculator-tab-btn active" data-calc="retirement">
+                            <span>📈</span> Retirement
+                        </button>
+                        <button class="calculator-tab-btn" data-calc="hsa">
+                            <span>❤️</span> HSA Planning
+                        </button>
+                        <button class="calculator-tab-btn" data-calc="healthcare">
+                            <span>🛡️</span> Healthcare Costs
+                        </button>
+                        <button class="calculator-tab-btn" data-calc="investment">
+                            <span>🏦</span> Investment
+                        </button>
+                    </div>
+
+                    <!-- Retirement Calculator -->
+                    <div id="retirementCalc" class="calculator-tab-content active">
+                        <div class="calculator-grid">
+                            <div class="calculator-inputs">
+                                <h4>Retirement Planning Calculator</h4>
+                                <div class="calc-form-group">
+                                    <label for="retCurrentAge">Current Age</label>
+                                    <input type="number" id="retCurrentAge" placeholder="35">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="retRetirementAge">Retirement Age</label>
+                                    <input type="number" id="retRetirementAge" placeholder="65">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="retCurrentSavings">Current Savings ($)</label>
+                                    <input type="number" id="retCurrentSavings" placeholder="50000">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="retMonthlyContribution">Monthly Contribution ($)</label>
+                                    <input type="number" id="retMonthlyContribution" placeholder="1000">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="retExpectedReturn">Expected Annual Return (%)</label>
+                                    <select id="retExpectedReturn">
+                                        <option value="5">5% - Conservative</option>
+                                        <option value="7" selected>7% - Moderate</option>
+                                        <option value="9">9% - Aggressive</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary" onclick="calculateRetirement()">Calculate</button>
+                            </div>
+                            <div class="calculator-results" id="retirementResults" style="display: none;">
+                                <h4>Results</h4>
+                                <div class="result-card primary-result">
+                                    <div class="result-label">Projected Retirement Balance</div>
+                                    <div class="result-value" id="retFinalAmount">$0</div>
+                                </div>
+                                <div class="result-grid">
+                                    <div class="result-card">
+                                        <div class="result-label">Total Contributions</div>
+                                        <div class="result-value" id="retTotalContributions">$0</div>
+                                    </div>
+                                    <div class="result-card">
+                                        <div class="result-label">Investment Growth</div>
+                                        <div class="result-value" id="retTotalEarnings">$0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HSA Calculator -->
+                    <div id="hsaCalc" class="calculator-tab-content">
+                        <div class="calculator-grid">
+                            <div class="calculator-inputs">
+                                <h4>HSA Planning Calculator</h4>
+                                <div class="calc-form-group">
+                                    <label for="hsaAge">Current Age</label>
+                                    <input type="number" id="hsaAge" placeholder="35">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="hsaYearsToRetirement">Years to Retirement</label>
+                                    <input type="number" id="hsaYearsToRetirement" placeholder="30">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="hsaCurrentBalance">Current HSA Balance ($)</label>
+                                    <input type="number" id="hsaCurrentBalance" placeholder="5000">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="hsaAnnualContribution">Annual Contribution ($)</label>
+                                    <input type="number" id="hsaAnnualContribution" placeholder="4300">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="hsaEmployerContribution">Employer Contribution ($)</label>
+                                    <input type="number" id="hsaEmployerContribution" placeholder="1000">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="hsaTaxBracket">Tax Bracket (%)</label>
+                                    <select id="hsaTaxBracket">
+                                        <option value="12">12%</option>
+                                        <option value="22" selected>22%</option>
+                                        <option value="24">24%</option>
+                                        <option value="32">32%</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary" onclick="calculateHSA()">Calculate</button>
+                            </div>
+                            <div class="calculator-results" id="hsaResults" style="display: none;">
+                                <h4>Results</h4>
+                                <div class="result-card primary-result">
+                                    <div class="result-label">HSA Balance at Retirement</div>
+                                    <div class="result-value" id="hsaFinalAmount">$0</div>
+                                </div>
+                                <div class="result-grid">
+                                    <div class="result-card">
+                                        <div class="result-label">Annual Tax Savings</div>
+                                        <div class="result-value" id="hsaAnnualTaxSavings">$0</div>
+                                    </div>
+                                    <div class="result-card">
+                                        <div class="result-label">Total Tax Savings</div>
+                                        <div class="result-value" id="hsaTotalTaxSavings">$0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Healthcare Cost Calculator -->
+                    <div id="healthcareCalc" class="calculator-tab-content">
+                        <div class="calculator-grid">
+                            <div class="calculator-inputs">
+                                <h4>Healthcare Cost Calculator</h4>
+                                <div class="calc-form-group">
+                                    <label for="healthCurrentAge">Current Age</label>
+                                    <input type="number" id="healthCurrentAge" placeholder="35">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="healthRetirementAge">Retirement Age</label>
+                                    <input type="number" id="healthRetirementAge" placeholder="65">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="healthCurrentCosts">Current Annual Healthcare Costs ($)</label>
+                                    <input type="number" id="healthCurrentCosts" placeholder="5000">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="healthInflation">Healthcare Inflation Rate (%)</label>
+                                    <select id="healthInflation">
+                                        <option value="5">5% - Conservative</option>
+                                        <option value="6" selected>6% - Historical Average</option>
+                                        <option value="7">7% - Higher Estimate</option>
+                                    </select>
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="healthYearsInRetirement">Years in Retirement</label>
+                                    <input type="number" id="healthYearsInRetirement" placeholder="25">
+                                </div>
+                                <button class="btn btn-primary" onclick="calculateHealthcare()">Calculate</button>
+                            </div>
+                            <div class="calculator-results" id="healthcareResults" style="display: none;">
+                                <h4>Results</h4>
+                                <div class="result-card primary-result">
+                                    <div class="result-label">Total Healthcare Costs in Retirement</div>
+                                    <div class="result-value" id="healthTotalCost">$0</div>
+                                </div>
+                                <div class="result-grid">
+                                    <div class="result-card">
+                                        <div class="result-label">Monthly Savings Needed</div>
+                                        <div class="result-value" id="healthMonthlySavings">$0</div>
+                                    </div>
+                                    <div class="result-card">
+                                        <div class="result-label">Annual Costs at Retirement</div>
+                                        <div class="result-value" id="healthCostsAtRetirement">$0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Investment Calculator -->
+                    <div id="investmentCalc" class="calculator-tab-content">
+                        <div class="calculator-grid">
+                            <div class="calculator-inputs">
+                                <h4>Investment Growth Calculator</h4>
+                                <div class="calc-form-group">
+                                    <label for="invInitialAmount">Initial Investment ($)</label>
+                                    <input type="number" id="invInitialAmount" placeholder="10000">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="invMonthlyContribution">Monthly Investment ($)</label>
+                                    <input type="number" id="invMonthlyContribution" placeholder="500">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="invTimeHorizon">Time Horizon (Years)</label>
+                                    <input type="number" id="invTimeHorizon" placeholder="20">
+                                </div>
+                                <div class="calc-form-group">
+                                    <label for="invExpectedReturn">Expected Annual Return (%)</label>
+                                    <select id="invExpectedReturn">
+                                        <option value="6">6% - Conservative</option>
+                                        <option value="8" selected>8% - Moderate</option>
+                                        <option value="10">10% - Growth</option>
+                                        <option value="12">12% - Aggressive</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary" onclick="calculateInvestment()">Calculate</button>
+                            </div>
+                            <div class="calculator-results" id="investmentResults" style="display: none;">
+                                <h4>Results</h4>
+                                <div class="result-card primary-result">
+                                    <div class="result-label">Total Investment Value</div>
+                                    <div class="result-value" id="invFinalAmount">$0</div>
+                                </div>
+                                <div class="result-grid">
+                                    <div class="result-card">
+                                        <div class="result-label">Total Invested</div>
+                                        <div class="result-value" id="invTotalContributions">$0</div>
+                                    </div>
+                                    <div class="result-card">
+                                        <div class="result-label">Investment Gains</div>
+                                        <div class="result-value" id="invTotalEarnings">$0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
