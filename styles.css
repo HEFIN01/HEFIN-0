@@ -224,13 +224,13 @@ h6 { font-size: var(--font-size-base); }
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-bold);
     color: var(--color-primary);
-    position: relative;
+   
 }
 .nav-logo{
       position: absolute;
     width: 100px;
     height: 75px;
-    left: 160px;
+    left: 120px;
     top: -5px;
 }
 .mobile-menu-btn {
