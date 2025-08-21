@@ -1,0 +1,10 @@
+{
+"info": {
+"name": "HEFIN Backend",
+"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+},
+"item": [
+{ "name": "Register", "request": { "method": "POST", "header": [], "body": { "mode": "raw", "raw": "{\n \"email\": \"user@example.com\",\n \"password\": \"password123\"\n}" }, "url": { "raw": "http://localhost:4000/api/auth/register" } } },
+{ "name": "Login", "request": { "method": "POST", "header": [], "body": { "mode": "raw", "raw": "{\n \"email\": \"user@example.com\",\n \"password\": \"password123\"\n}" }, "url": { "raw": "http://localhost:4000/api/auth/login" } } }
+]
+}
