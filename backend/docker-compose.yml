@@ -1,0 +1,38 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend # Specify the build context for the backend service
+      dockerfile: Dockerfile
+    container_name: hefin-backend
+    ports:
+      - "5000:5000" # Map host port 5000 to container port 5000
+    environment:
+      # Load environment variables from a .env file (ensure .env exists or copy .env.example)
+      - PORT=${PORT}
+      - MONGO_URI=${MONGO_URI}
+      - JWT_SECRET=${JWT_SECRET}
+      - ICP_CANISTER_ID=${ICP_CANISTER_ID} # Pass ICP canister ID to backend
+      - ICP_HOST=${ICP_HOST:-http://127.0.0.1:4943} # For local dfx replica
+    depends_on:
+      - mongodb # Ensure mongodb starts before the backend
+    volumes:
+      - ./backend:/app # Mount the backend directory for development (optional, but useful for hot-reloading if you use nodemon)
+      - /app/node_modules # Anonymous volume to prevent host's node_modules from overriding container's
+
+  mongodb:
+    image: mongo:latest # Use the official MongoDB image
+    container_name: hefin-mongodb
+    ports:
+      - "27017:27017" # Map host port 27017 to container port 27017
+    environment:
+      # MongoDB root user and password for development (do not use in production without caution)
+      MONGO_INITDB_ROOT_USERNAME: hefinuser
+      MONGO_INITDB_ROOT_PASSWORD: hefinpassword
+    volumes:
+      - mongodb_data:/data/db # Persist MongoDB data in a named volume
+
+volumes:
+  mongodb_data: # Define the named volume for MongoDB data persistence
