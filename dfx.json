@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "hefin_canister": {
+      "main": "src/hefin_canister/main.mo",
+      "type": "motoko"
+    },
+    "hefin_frontend": {
+      "type": "assets",
+      "source": ["dist"],
+      "build": ["npm install && npm run build"]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "providers": ["https://ic0.app"],
+      "type": "persistent"
+    }
+  },
+  "version": 1
+}
