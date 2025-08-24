@@ -68,3 +68,9 @@ cd hefin-frontend
 npm install
 VITE_API_URL=https://hefin-backend.up.railway.app
 npm run dev
+# Start local replica
+dfx start --background
+
+# Deploy all canisters (backend + frontend)
+dfx deploy
+
