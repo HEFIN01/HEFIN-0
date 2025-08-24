@@ -1,21 +1,29 @@
 {
   "canisters": {
-    "hefin_backend": {
-      "type": "motoko",
-      "main": "src/backend/main.mo"
+    "hefin_canister": {
+      "main": "src/hefin_canister/main.mo",
+      "type": "motoko"
     },
     "hefin_frontend": {
       "type": "assets",
-      "source": "src/frontend/dist",
-      "dependencies": ["hefin_backend"]
+      "source": ["dist"],
+      "build": ["npm install && npm run build"]
     }
   },
   "defaults": {
-    "build": { "packtool": "" }
+    "build": {
+      "packtool": ""
+    }
   },
   "networks": {
-    "local": { "type": "ephemeral", "bind": "127.0.0.1:4943" },
-    "ic": { "type": "persistent", "providers": ["https://ic0.app"] }
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "providers": ["https://ic0.app"],
+      "type": "persistent"
+    }
   },
   "version": 1
 }
